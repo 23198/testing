@@ -6,7 +6,7 @@ Digital Sales I-Analyze is a comprehensive project designed to fetch and analyze
 
 The project fetches data from the following sources:
 
-**e-dialog**: Provides access to Google Analytics data, including website traffic, user behavior, and conversions.
+**E-dialog**: Provides access to Google Analytics data, including website traffic, user behavior, and conversions.
 
 **Google Analytics (GA4)**: Fetches data related to website traffic, user interactions, and conversion events.
 
