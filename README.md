@@ -15,8 +15,8 @@ The project fetches data from the following sources:
 ## **Supermetrics**:
 
 **CM360 (Campaign Manager 360)**: Fetches data on campaign performance, ad impressions, clicks, and conversions.
-**DV360 (Display and Video 360)**: Retrieves data related to display and video ad performance, impressions, clicks, and conversions.
-**Meta (Facebook)**: Fetches data from Facebook, including ad campaign metrics and performance.
+**DV360 (Display and Video 360)**: Retrieves data related to display and video ad performance, impressions, clicks, and conversions.<br>
+**Meta (Facebook)**: Fetches data from Facebook, including ad campaign metrics and performance.<br>
 **Google Ads**: Retrieves data related to Google Ads campaigns, ad performance, clicks, and conversions.
 
 ## **Workflow Steps**
