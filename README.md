@@ -19,6 +19,18 @@ The project fetches data from the following sources:
 **Meta (Facebook)**: Fetches data from Facebook, including ad campaign metrics and performance.<br>
 **Google Ads**: Retrieves data related to Google Ads campaigns, ad performance, clicks, and conversions.
 
+## **Data Loading and Scripts**
+
+The project utilizes the following scripts to load and transfer data:
+
+**daily_load_to_bq.py**: This script is used for the daily load to the target tables in BigQuery. It fetches data from the source BigQuery tables, which are loaded via connections, and creates a CSV file of all the data. The CSV file is then stored in a GCS (Google Cloud Storage) bucket associated with the target tables.
+
+**bq_transfer_from_prod_to_test.py**: This script transfers all the data from the production BigQuery environment to the test BigQuery environment. It creates a CSV file of the data and stores it in a GCS bucket.
+
+**bq_transfer_from_prod_to_dev.py**: This script is run incrementally after the daily load to the production environment. It transfers the daily changes to the development environment and creates CSV files for the transferred data.
+
+**retention_multiple_partition.py**: This script runs monthly to delete partitions older than 2 years from BigQuery. Before deletion, the script stores the deleted partitions in an archive bucket in GCS.
+
 ## **Workflow Steps**
 
 **Data Extraction**: The project initiates data extraction from each data source using appropriate APIs and connectors. The data is fetched based on the defined queries and filters to retrieve the desired information.
